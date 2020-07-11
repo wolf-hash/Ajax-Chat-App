@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from chatapp import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homepage.urls')),
     path('resources/', include('resources.urls')),
     path('clubs/', include('clubs.urls')),
-    path('chatroom/', include('chatroom.urls'))
+    path('chatroom/', include('chatapp.urls')),
+    path('createroom/', views.createroom, name='createroom')
 ]

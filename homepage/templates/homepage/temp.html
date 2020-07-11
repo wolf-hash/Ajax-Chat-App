@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -11,8 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Floating labels example for Bootstrap</title>
 
@@ -23,17 +23,17 @@
 
     <!-- Custom styles for this template -->
     <style>
-        :root {
+         :root {
             --input-padding-x: .75rem;
             --input-padding-y: .75rem;
-          }
-          
-          html,
-          body {
+        }
+        
+        html,
+        body {
             height: 100%;
-          }
-          
-          body {
+        }
+        
+        body {
             display: -ms-flexbox;
             display: -webkit-box;
             display: flex;
@@ -46,112 +46,232 @@
             padding-top: 40px;
             padding-bottom: 40px;
             background-color: #f5f5f5;
-          }
-          
-          .form-signin {
+        }
+        
+        .form-signin {
             width: 100%;
             max-width: 420px;
             padding: 15px;
             margin: 0 auto;
-          }
-          
-          .form-label-group {
+        }
+        
+        .form-label-group {
             position: relative;
             margin-bottom: 1rem;
-          }
-          
-          .form-label-group > input,
-          .form-label-group > label {
+        }
+        
+        .form-label-group>input,
+        .form-label-group>label {
             padding: var(--input-padding-y) var(--input-padding-x);
-          }
-          
-          .form-label-group > label {
+        }
+        
+        .form-label-group>label {
             position: absolute;
             top: 0;
             left: 0;
             display: block;
             width: 100%;
-            margin-bottom: 0; /* Override default `<label>` margin */
+            margin-bottom: 0;
+            /* Override default `<label>` margin */
             line-height: 1.0;
             color: #495057;
             border: 1px solid transparent;
             border-radius: .25rem;
             transition: all .1s ease-in-out;
-          }
-          
-          .form-label-group input::-webkit-input-placeholder {
+        }
+        
+        .form-label-group input::-webkit-input-placeholder {
             color: transparent;
-          }
-          
-          .form-label-group input:-ms-input-placeholder {
+        }
+        
+        .form-label-group input:-ms-input-placeholder {
             color: transparent;
-          }
-          
-          .form-label-group input::-ms-input-placeholder {
+        }
+        
+        .form-label-group input::-ms-input-placeholder {
             color: transparent;
-          }
-          
-          .form-label-group input::-moz-placeholder {
+        }
+        
+        .form-label-group input::-moz-placeholder {
             color: transparent;
-          }
-          
-          .form-label-group input::placeholder {
+        }
+        
+        .form-label-group input::placeholder {
             color: transparent;
-          }
-          
-          .form-label-group input:not(:placeholder-shown) {
+        }
+        
+        .form-label-group input:not(:placeholder-shown) {
             padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
             padding-bottom: calc(var(--input-padding-y) / 3);
-          }
-          
-          .form-label-group input:not(:placeholder-shown) ~ label {
+        }
+        
+        .form-label-group input:not(:placeholder-shown)~label {
             padding-top: calc(var(--input-padding-y) / 3);
             padding-bottom: calc(var(--input-padding-y) / 3);
             font-size: 12px;
             color: #777;
-          }
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <form class="form-signin">
-      <div class="text-center mb-4">
-        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
-        <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
-      </div>
+        <div class="text-center mb-4">
+            <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
+            <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+        </div>
 
-      <div class="form-label-group">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputEmail">Email address</label>
-      </div>
+        <div class="form-label-group">
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputEmail">Email address</label>
+        </div>
 
-      <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <label for="inputPassword">Password</label>
-      </div>
+        <div class="form-label-group">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <label for="inputPassword">Password</label>
+        </div>
 
-      <div class="checkbox mb-3">
-        <label>
+        <div class="checkbox mb-3">
+            <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
     </form>
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- LOGIN -->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Login</title>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+        
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+        }
+        
+        .form-signin .checkbox {
+            font-weight: 400;
+        }
+        
+        .form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action='/login/' method="POST" class="form-signin">
+        {% csrf_token%}
+        <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
+        <label class="sr-only">Registration No.</label>
+        <input type="text" id="regno" name="regno" class="form-control" placeholder="Registration No." required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="password" name='password' class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
 </html>
