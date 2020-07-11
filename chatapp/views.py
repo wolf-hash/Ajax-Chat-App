@@ -16,11 +16,12 @@ def createroom(request):
     if request.user.is_anonymous:
         return redirect('/login')
     
-    # Room.objects.create(user=request.user, name='name')
+    clientip = request.META['REMOTE_ADDR']
+    room = Room.objects.create(user=request.user, name='test', ipaddress=clientip)
     return HttpResponse('check')
 
 def activeroom(request, room_name):
-    if request.user.is_anonymous:
+    if not request.user.is_anonymous:
         if Room.objects.filter(name=room_name).exists():
             messages = Message.objects.filter(name=room_name)
             return render(request, 'chatapp/room.html', {'messages': messages})
