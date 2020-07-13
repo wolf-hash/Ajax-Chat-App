@@ -37,10 +37,9 @@ def activeroom(request, room_name):
     return redirect('/login')
 
 
-def Post(request):
+def Post(request, room_key):
     if request.method == 'POST':
         msg = request.POST.get('msgbox', None)
-        room_key = request.POST.get('room_data', None)
         c = Message.objects.create(user=request.user, messages=msg, name=room_key)
         if msg != '':
             c.save()

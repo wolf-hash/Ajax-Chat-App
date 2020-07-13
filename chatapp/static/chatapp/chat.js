@@ -3,9 +3,9 @@ $('#chat-form').on('submit', function(event) {
     console.log(roomid);
 
     $.ajax({
-        url: '../post',
+        url: '../' + roomid + '/post',
         type: 'POST',
-        data: { msgbox: $('#chat-msg').val(), room_data: roomid},
+        data: { msgbox: $('#chat-msg').val()},
 
         success: function(json) {
             $('#chat-msg').val('');
