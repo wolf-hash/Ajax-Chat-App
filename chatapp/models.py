@@ -14,8 +14,8 @@ class Room(models.Model):
 
 class Message(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    name = models.ForeignKey(Room, on_delete=models.CASCADE)
-    messages = models.TextField(max_length=10000)
+    name = models.CharField(max_length=100, null=True)
+    messages = models.TextField(max_length=10000, null=True)
     created = models.DateTimeField(auto_now_add=True, null=True)
     ipaddress = models.GenericIPAddressField(null=True)
 
