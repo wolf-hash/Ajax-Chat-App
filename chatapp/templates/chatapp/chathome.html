@@ -41,14 +41,15 @@
 </div>
 <br>
       
-
+    <table class="table table-striped my-2">
         {% for room in rooms %}
-          <a href="{{room}}/">{{room}}</a> <br>
+          <tr><td><a href="{{room}}/">{{room}}</a></td></tr>
         {% endfor%}
-        
-    </div>
+    </table>    
+    
     <br><br>
-    <a href="/logout/">Logout</a>
+    <button class="btn btn-primary" href="/logout/">Logout</button>
+  </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
