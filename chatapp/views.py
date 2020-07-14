@@ -18,11 +18,12 @@ def chathome(request):
 def createroom(request):
     if request.user.is_anonymous:
         return redirect('/login')
-
+    newroom = request.GET['room']
+    print(newroom,'#'*20)
     clientip = request.META['REMOTE_ADDR']
     room = Room.objects.create(
-        user=request.user, name='test', ipaddress=clientip)
-    return HttpResponse('check')
+        user=request.user, name=newroom, ipaddress=clientip)
+    return HttpResponse(newroom)
 
 
 def activeroom(request, room_name):
