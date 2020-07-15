@@ -22,7 +22,7 @@ $('#chat-form').on('submit', function(event) {
 
  function getMessages(){
      
-    url='../messages?id='+ chatlastid + '&room_id=' + roomid
+    url='../messages?id='+ chatlastid + '&room_id=' + roomid;
     var req = new XMLHttpRequest();
     req.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -40,6 +40,7 @@ $('#chat-form').on('submit', function(event) {
     if (refresh){
         var chatlist = document.getElementById('msg-list-div');
         chatlist.scrollTop = chatlist.scrollHeight;
+
     }
 }
 
